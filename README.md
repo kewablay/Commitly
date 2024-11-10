@@ -1,27 +1,41 @@
-# Commitly
+# Commitly: AI-Powered Conventional Commit Message Generator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+**Commitly** is an AI-driven tool designed to help developers create clear, structured commit messages that adhere to the [Conventional Commits](https://www.conventionalcommits.org/) standard. Built with **Angular 17** and powered by **Gemini**, Commitly allows you to simply describe your changes, and it generates a consistent, well-formatted commit message, enhancing clarity and structure in your commit history.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Key Features
 
-## Code scaffolding
+- **AI-Powered Message Generation**: Leveraging Gemini’s advanced language capabilities, Commitly translates simple descriptions into structured, Conventional Commit-compliant messages.
+- **Conventional Commits Compliance**: Ensures standardized commit messages, supporting better collaboration and changelog automation.
+- **Quick Start Suggestions**: Offers example prompts to help guide message creation.
+- **User-Friendly Angular Interface**: An intuitive design that includes example tags and a prompt input field for seamless use.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Why Use Commitly?
 
-## Build
+In collaborative environments, maintaining a clean, structured commit history is crucial. Commitly saves time by automating commit message formatting while ensuring adherence to the Conventional Commits standard. This improves version control and readability for both current and future contributors.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To set up Commitly locally, follow these instructions:
 
-## Running end-to-end tests
+### Prerequisites
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Node.js** and **npm** installed.
+- **Angular CLI** installed globally:
 
-## Further help
+## Installation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Clone the Repository
+
+```bash
+git clone https://github.com/kewablay/commitly.git
+cd commitly
+
+npm install
+
+ng serve
+```
+
