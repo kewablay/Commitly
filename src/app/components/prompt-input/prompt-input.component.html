@@ -1,0 +1,11 @@
+<form [formGroup]="promptForm" class="prompt-input" (submit)="submitPrompt()">
+  <div class="input-group">
+    <textarea name="prompt" id="propmt" placeholder="Describe your changes..." rows="1" formControlName="prompt"></textarea>
+
+    <p-button [disabled]="!promptForm.valid" type="submit" icon="pi pi-arrow-right" severity="success" [loading]="isLoading" [rounded]="true"/>
+  </div>
+
+  <p class="footer">
+    <small>Powered by Gemini. Built by <a href="https://github.com/kewablay" target="_blank" class="link">Kewa Blay</a></small>
+  </p>
+</form>

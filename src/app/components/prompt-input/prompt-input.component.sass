@@ -1,0 +1,46 @@
+@use '../../../styles/_variables.sass' as * 
+@use '../../../styles/_mixins.sass' as * 
+
+.prompt-input 
+    width: 100%
+    // position: fixed
+    // bottom: 1rem
+    display: flex
+    @include flex(column, .5rem)
+    justify-content: center
+    align-items: center
+    padding: 1.5rem
+        // @include breakpoint(large)
+        //     width: 768px
+
+    .input-group
+        margin-inline: auto 
+        position: relative 
+        width: 100%
+        max-width: 768px
+        // @include breakpoint(large)
+        //     width: 768px
+
+        textarea
+            width: 100%
+            // height: 2rem !important
+            padding: 1.3rem
+            border: none
+            border-radius: 2rem
+            resize: none
+            background: $bg-accent
+            border: 1px solid $clr-gray-100
+
+        p-button 
+            position: absolute
+            color: black !important
+            right: .5rem
+            top: .4rem
+
+            p-button-icon
+                color: black !important
+                    
+
+
+
+    
