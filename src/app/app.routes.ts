@@ -7,9 +7,4 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/home/home.component').then((m) => m.HomeComponent),
   },
-  {
-    path: 'chat/:id',
-    loadComponent: () =>
-      import('./pages/chat/chat.component').then((m) => m.ChatComponent),
-  },
 ];
