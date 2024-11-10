@@ -1,3 +1,8 @@
 <app-navbar />
+@if(chat$ | async; as chats) { @if(chats.length > 0) {
+<app-chat [chats]="chats" />
+
+} @else {
 <app-hero-section />
+} }
 <app-prompt-input />
