@@ -1,1 +1,134 @@
-/* You can add global styles to this file, and also import other style files */
+@use './styles/_variables.sass' as *
+
+@import "primeng/resources/themes/soho-dark/theme.css"
+@import "primeng/resources/primeng.css"
+@import "primeicons/primeicons.css"
+
+@font-face
+    font-family: 'avgardd-bold'
+    src: url('assets/fonts/AVGARDD_2.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'avgardd-normal'
+    src: url('assets/fonts/AVGARDN_2.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+*
+    box-sizing: border-box
+    font-family: 'avgardd-normal', sans-serif
+    color: $clr-text
+    html
+        -moz-text-size-adjust: none
+        -webkit-text-size-adjust: none
+        text-size-adjust: none
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd
+    margin-block-end: 0
+    margin-block-start: 0
+ul[role="list"],
+ol[role="list"]
+    list-style: none
+body
+    line-height: 1.5
+    margin: 0
+    // width: 100%
+    // height: 100vh
+//   min-height: 100vh
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label
+    line-height: 1.1
+h1,
+h2,
+h3,
+h4
+    text-wrap: balance
+a
+    &:not([class])
+        text-decoration-skip-ink: auto
+        color: currentColor
+img,
+picture
+    max-width: 100%
+    display: block
+input,
+button,
+textarea,
+select
+    font-family: inherit
+    font-size: inherit
+textarea
+    &:not([rows])
+        min-height: 10em
+\:target
+    scroll-margin-block: 5ex
+button
+    cursor: pointer
+
+body
+    background-color: $background
+    color: $clr-text
+    position: relative
+    overflow-x: hidden
+
+    .bg-accent-image
+        position: fixed
+        bottom: -30%
+        left: -20%
+        z-index: -1
+            // pointer-events: none
+
+    .bg-accent-image-2
+        position: fixed
+        top: -30%
+        right: -20%
+        transform: rotate(180deg)
+        // pointer-events: none
+
+.text-primary
+    color: $clr-primary
+
+h1
+    font-size: 50px
+    font-family: 'avgardd-bold', sans-serif
+    line-height: 135%
+
+
+.btn
+    &-primary
+        background-color: $clr-primary
+        color: black
+        .pi.pi-arrow-right
+            color: black !important
+
+
+.link 
+    color: $clr-primary
+    text-decoration: none
+    transition: .3s ease
+    &:hover
+        text-decoration: underline
+        cursor: pointer
+
+.max-width-wrapper
+    max-width: 768px
+    margin-inline: auto
+
+
+.black-icon .pi 
+    color: black
