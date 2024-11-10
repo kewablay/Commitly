@@ -1,0 +1,100 @@
+@use '../../../styles/_variables.sass' as *
+@use '../../../styles/_mixins.sass' as *
+
+.chat
+    padding: 1.5rem
+    margin-inline: auto
+    max-width: 768px
+    margin-bottom: 7rem
+    margin-top: 3rem
+    @include flex(column, 1rem)
+
+    .message
+        @include flex(row, 1rem)
+        gap: 1rem
+        width: fit-content
+        max-width: 65%
+        justify-content: flex-start
+        align-items: flex-start
+
+        .content
+            border-radius: 7px
+            padding: 1rem
+            background: $bg-accent
+
+    .user-message
+        @include flex(row-reverse, 1rem)
+        margin-left: auto
+
+        .content
+            background: $clr-gray-100
+
+    .ai-message
+        max-width: 100%
+
+        .content
+            max-width: 100%
+            overflow-x: auto
+
+.loading-container 
+    @include flex(row, 1rem)
+    
+/* Add these styles for markdown formatting */
+:host ::ng-deep
+ul,
+ol
+    margin: 1rem 0
+    padding-left: 2rem
+
+li
+    margin: 0.5rem 0
+
+strong
+    font-weight: 600
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    margin: 1.5rem 0 1rem 0
+
+p
+    margin: 1rem 0
+    line-height: 1.6
+
+code
+    background-color: #f4f4f4
+    padding: 0.2rem 0.4rem
+    border-radius: 4px
+    font-size: 0.9em
+
+pre
+    background-color: #f4f4f4
+    padding: 1rem
+    border-radius: 4px
+    overflow-x: auto
+    margin: 1rem 0
+
+blockquote
+    border-left: 4px solid #ddd
+    padding-left: 1rem
+    margin: 1rem 0
+    color: #666
+
+/* Styles for syntax highlighting */
+.hljs
+    background: #f4f4f4
+    padding: 1rem
+    border-radius: 4px
+
+/* You can customize the colors for different code elements */
+.hljs-keyword
+    color: #0070c1
+.hljs-string
+    color: #a31515
+.hljs-number
+    color: #098658
+.hljs-comment
+    color: #008000

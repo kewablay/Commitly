@@ -1,0 +1,61 @@
+<div class="chat">
+  @for(chat of chats; track chat) {
+  <!-- <p>{{ chat.isUser ? "You" : "AI" }}</p>
+  <p class="timestamp">{{ chat.timestamp | date : "HH:mm:ss" }}</p> -->
+  <div class="message" [class]="chat.isUser ? 'user-message' : 'ai-message'">
+    <div class="profile">
+      <div class="ai-icon">
+        @if(chat.isUser) {
+        <p-avatar
+          icon="pi pi-user"
+          styleClass="mr-2"
+          size="large"
+          [style]="{ 'background-color': '#c49857', color: '#222323' }"
+          shape="circle"
+        />
+
+        } @else {
+        <p-avatar
+          icon="pi pi-microchip-ai"
+          styleClass="mr-2"
+          size="large"
+          [style]="{ 'background-color': '#9dc154', color: '#222323' }"
+          shape="circle"
+        />
+        }
+      </div>
+    </div>
+    <div class="content" [innerHTML]="parseMarkdown(chat.content)"></div>
+  </div>
+  }
+
+  <!-- chat loading  -->
+  @if(chatLoading$ | async; as loading) { @if(loading) {
+
+  <div class="loading-container">
+    <p-avatar
+      icon="pi pi-microchip-ai"
+      styleClass="mr-2"
+      size="large"
+      [style]="{ 'background-color': '#9dc154', color: '#222323' }"
+      shape="circle"
+    />
+
+    <p-skeleton height="2rem" styleClass="mb-2 skeleton" />
+    <p>Loading...</p>
+  </div>
+  } } 
+  <!-- @if(chatError$ |async; as error) { @if(error !== null) {
+
+  <div class="error-container">
+    <p-avatar
+      icon="pi pi-microchip-ai"
+      styleClass="mr-2"
+      size="large"
+      [style]="{ 'background-color': '#9dc154', color: '#222323' }"
+      shape="circle"
+    />
+    <p class="text-warning">An error occured. Please try again.</p>
+  </div>
+  } } -->
+</div>
