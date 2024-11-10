@@ -1,28 +1,33 @@
 @use '../../../styles/_variables.sass' as * 
 @use '../../../styles/_mixins.sass' as * 
 
-.prompt-input 
+.prompt-input
     width: 100%
-    // position: fixed
-    // bottom: 1rem
+    position: fixed
+    bottom: 0rem
     display: flex
-    @include flex(column, .5rem)
+    @include flex(column, .3rem)
     justify-content: center
     align-items: center
-    padding: 1.5rem
+    padding: 1rem
+    z-index: 1
+    background: $background
         // @include breakpoint(large)
         //     width: 768px
 
     .input-group
-        margin-inline: auto 
-        position: relative 
+        margin-inline: auto
+        position: relative
         width: 100%
         max-width: 768px
+        z-index: 5
         // @include breakpoint(large)
         //     width: 768px
 
+
         textarea
             width: 100%
+            z-index: 10
             // height: 2rem !important
             padding: 1.3rem
             padding-right: 3rem
@@ -40,16 +45,11 @@
                 display: none
                 width: 0 !important
 
-        p-button 
+            &:focus-visible
+                outline: none
+                border-color: $clr-primary
+        p-button
             position: absolute
             color: black !important
             right: .5rem
             top: .4rem
-
-            p-button-icon
-                color: black !important
-                    
-
-
-
-    
