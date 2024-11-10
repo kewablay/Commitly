@@ -1,0 +1,19 @@
+<section class="hero">
+  <div class="header">
+    <h1>Hi, Welcome to <span class="text-primary">Commitly 👋</span></h1>
+    <p>
+      Describe your changes, and Commitly will generate the perfect commit
+      message for you.
+    </p>
+  </div>
+
+  <!-- example prompts -->
+  <div class="sample-prompts">
+    @for(prompt of prompts; track prompt) {
+    <div class="prompt">
+      <p class="tag">{{ prompt.tag }}</p>
+      <p class="description">{{ prompt.description }}</p>
+    </div>
+    }
+  </div>
+</section>
