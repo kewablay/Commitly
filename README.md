@@ -39,3 +39,9 @@ npm install
 ng serve
 ```
 
+## Live Demo
+
+![image](https://github.com/user-attachments/assets/021c2d7b-9ab3-4eae-954e-dc296e933760)
+
+Check out the live version of Commitly [here](https://commitly-one.vercel.app/).
+
