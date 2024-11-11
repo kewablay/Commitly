@@ -41,8 +41,7 @@ ng serve
 
 ## Live Demo
 
-![image](https://github.com/user-attachments/assets/c2aedd3d-c6a0-40fe-8d65-3672e2840afc)
-
+![image](https://github.com/user-attachments/assets/021c2d7b-9ab3-4eae-954e-dc296e933760)
 
 Check out the live version of Commitly [here](https://commitly-one.vercel.app/).
 
