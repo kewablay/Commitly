@@ -55,5 +55,12 @@ export class PromptInputComponent {
     }
   }
 
+  onEnterPress(event: Event) {
+    if (this.promptForm.valid) {
+      event.preventDefault(); // Prevents newline in textarea
+      this.submitPrompt(); // Submits the form
+    }
+  }
+
   ngOnInit() {}
 }
